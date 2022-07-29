@@ -44,7 +44,11 @@ async function buildMailServer() {
   });
 
 
+router.get('/',(req,res)=>{
 
+  
+res.send('hey its working')
+})
   router.post("/contact", (req, res) => {
 
     const name = req.body.firstName + req.body.lastName;
