@@ -27,7 +27,7 @@ async function buildMailServer() {
 
     auth: {
       type: 'OAuth2',
-      user: 'jschlitzii@gmail.com',
+      user: 'process.env.username',
       clientId: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
       refreshToken: process.env.REFRESH_TOKEN,
@@ -57,7 +57,7 @@ res.send('hey its working')
     const phone = req.body.phone;
     const mail = {
       from: name,
-      to: "jschlitzii@gmail.com",
+      to: "process.env.username",
       subject: "Contact Form Submission - Portfolio",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
